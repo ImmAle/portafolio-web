@@ -1,0 +1,276 @@
+/* src/styles/PortfolioWeb.css actualizado con tema morado oscuro */
+
+:root {
+  --bg-color: #1e1b2e;
+  --text-color: #ffffff;
+  --accent-color: #a855f7;
+  --hover-accent: #c084fc;
+  --muted: #a1a1aa;
+  --surface: #2a263a;
+  --card: #1e1b2e;
+  --border: #4b5563;
+}
+
+.light-mode {
+  --bg-color: #f3f4f6;
+  --text-color: #1e1b2e;
+  --accent-color: #a855f7;
+  --hover-accent: #9333ea;
+  --muted: #4b5563;
+  --surface: #e5e7eb;
+  --card: #ffffff;
+  --border: #d1d5db;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.portfolio-container {
+  min-height: 100vh;
+  scroll-padding-top: 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.3s;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 10;
+  height: 60px;
+}
+
+.logo {
+  margin-top: 11rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  transition: color 0.3s;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--accent-color);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.2);
+  color: var(--hover-accent);
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.hero h2:hover {
+  transform: scale(1.05);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: black;
+  font-weight: bold;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover-accent);
+  transform: scale(1.05);
+}
+
+.about,
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about h3,
+.projects h3,
+.contact h3,
+.gallery h3 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.projects {
+  background-color: var(--surface);
+  padding: 4rem 2rem;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project-card {
+  background-color: var(--card);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+  height: 180px;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-content h4 {
+  margin-bottom: 0.5rem;
+}
+
+.project-content p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.project-content a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-content a:hover {
+  color: var(--hover-accent);
+}
+
+.download-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: var(--accent-color);
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.download-link:hover {
+  background-color: var(--hover-accent);
+  color: #000;
+}
+
+.social-icons {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--text-color);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.gallery {
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
