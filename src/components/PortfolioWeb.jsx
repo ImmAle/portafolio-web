@@ -39,13 +39,13 @@ const PortfolioWeb = () => {
       <h3>Galería</h3>
       <div className="gallery-grid">
         <div className="gallery-item">
-          <img src="public/images/p1.jpg" alt="Proyecto 1" />
+          <img src="/portafolio-web//images/p1.png" alt="Proyecto 1" />
         </div>
         <div className="gallery-item">
-          <img src="public/images/p2.jpg" alt="Proyecto 2" />
+          <img src="/portafolio-web//images/p2.jpg" alt="Proyecto 2" />
         </div>
         <div className="gallery-item">
-          <img src="public/images/p3.png" alt="Proyecto 3" />
+          <img src="/portafolio-web//images/p3.jpg" alt="Proyecto 3" />
         </div>
       </div>
   </section>
@@ -55,12 +55,14 @@ const PortfolioWeb = () => {
 <div className="project-card">
   <div
     className="project-image"
-    style={{ backgroundImage: "url('/files/vista-previa-proyecto1.jpg')" }}
+    style={{ backgroundImage: `url('${import.meta.env.BASE_URL}files/vista-previa-proyecto1.jpg')`}}
   ></div>
   <div className="project-content">
     <h4>Certificado de Ingles</h4>
     <p>British House International 2021-2022.</p>
-    <a href="/files/ingles.pdf"downloadclassName="download-link">Ver</a>
+    <a href="/portafolio-web/files/ingles.pdf" target="_blank" rel="noopener noreferrer">Ver</a>
+
+
   </div>
 </div>
 
@@ -68,12 +70,14 @@ const PortfolioWeb = () => {
 <div className="project-card">
   <div
     className="project-image"
-    style={{ backgroundImage: "url('/files/vista-previa-proyecto2.jpg')" }}
+    style={{ backgroundImage: `url('${import.meta.env.BASE_URL}files/vista-previa-proyecto2.jpg')` }}
   ></div>
   <div className="project-content">
     <h4>Certificado IoT</h4>
     <p>Cisco Networking Academy® Introduction to IoT.</p>
-    <a href="/files/iot.pdf"downloadclassName="download-link">Ver</a>
+    <a href="/portafolio-web/files/iot.pdf" target="_blank" rel="noopener noreferrer">Ver</a>
+
+
   </div>
 </div>
 
@@ -81,12 +85,14 @@ const PortfolioWeb = () => {
 <div className="project-card">
   <div
     className="project-image"
-    style={{ backgroundImage: "url('/files/vista-previa-proyecto3.jpg')" }}
+    style={{ backgroundImage: `url('${import.meta.env.BASE_URL}files/vista-previa-proyecto3.jpg')` }}
   ></div>
   <div className="project-content">
-    <h4>Certificado IoT</h4>
-    <p>Curriculum Vitae.</p>
-    <a href="/files/CV.pdf"downloadclassName="download-link">Ver</a>
+    <h4>Curriculum Vitae</h4>
+    <p>Sobre mi.</p>
+    <a href="/portafolio-web/files/CV.pdf" target="_blank" rel="noopener noreferrer">Ver</a>
+
+
   </div>
 </div>
 </section>
