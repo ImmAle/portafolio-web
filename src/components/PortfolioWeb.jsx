@@ -3,10 +3,16 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FaMoon, FaSun } from "react-icons/fa";
 import "../styles/PortfolioWeb.css";
+import ParticlesBackground from "./ParticlesBackground";
+
 
 const PortfolioWeb = () => {
   return (
     <div className="portfolio-container">
+
+
+
+
       <header className="header">
         <h1 className="logo">Immanol Alvarado</h1>
         <nav className="nav">
@@ -16,6 +22,7 @@ const PortfolioWeb = () => {
           <button className="theme-toggle" onClick={() => document.body.classList.toggle('light-mode')}>
             Cambiar tema
             </button>
+            
         </nav>
       </header>
 
@@ -39,13 +46,13 @@ const PortfolioWeb = () => {
       <h3>Galería</h3>
       <div className="gallery-grid">
         <div className="gallery-item">
-          <img src="/portafolio-web//images/p1.png" alt="Proyecto 1" />
+          <img src="images/p1.png" alt="Proyecto 1" />
         </div>
         <div className="gallery-item">
-          <img src="/portafolio-web//images/p2.jpg" alt="Proyecto 2" />
+          <img src="images/p2.jpg" alt="Proyecto 2" />
         </div>
         <div className="gallery-item">
-          <img src="/portafolio-web//images/p3.jpg" alt="Proyecto 3" />
+          <img src="images/p3.jpg" alt="Proyecto 3" />
         </div>
       </div>
   </section>
@@ -103,9 +110,9 @@ const PortfolioWeb = () => {
         <h3>Contacto</h3>
         <p>¿Quieres trabajar conmigo? ¡Hablemos!</p>
         <div className="social-icons">
-          <a href="https://github.com" aria-label="GitHub"><FaGithub /></a>
-          <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedin /></a>
-          <a href="mailto:correo@ejemplo.com" aria-label="Email"><FaEnvelope /></a>
+          <a href="https://github.com/ImmAle" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/immanol-alvarado-grados-6a399534b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+          <a href="mailto:immanolalvarado22@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><FaEnvelope /></a>
         </div>
       </section>
 

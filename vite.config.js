@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: '/portafolio-web/',
   plugins: [react()],
-})
+  base: "/", // 👈 importantísimo para que carguen los CSS y JS
+});

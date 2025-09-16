@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+#tsparticles {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1;
+  pointer-events: none; /* No bloquea clics */
+}
+

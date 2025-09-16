@@ -1,5 +1,14 @@
 /* src/styles/PortfolioWeb.css actualizado con tema morado oscuro */
 
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
 :root {
   --bg-color: #1e1b2e;
   --text-color: #ffffff;
@@ -26,6 +35,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/*Esto es para desaparecer la "Box de diferente color" de la barar superior, galeria y documentos o proyectos */
+.section,
+.projects,
+.gallery,
+.header
+ {
+  background-color: transparent !important;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -35,8 +53,8 @@ body {
 }
 
 .portfolio-container {
-  min-height: 100vh;
-  scroll-padding-top: 60px;
+  position: relative;
+  z-index: 0;
 }
 
 .header {
@@ -48,10 +66,16 @@ body {
   transition: border-color 0.3s;
   position: sticky;
   top: 0;
-  background-color: var(--bg-color);
+  background-color: rgba(30, 27, 46, 0.7); /* Transparente */
+  backdrop-filter: blur(8px); /* Difuminado */
+  -webkit-backdrop-filter: blur(8px); /* Soporte para Safari */
   z-index: 10;
   height: 60px;
+  border-radius: 0 0 12px 12px; /* Opcional: esquinas inferiores redondeadas */
+  margin-top: 2rem;
+  padding: 10x
 }
+
 
 .logo {
   margin-top: 11rem;
@@ -167,6 +191,7 @@ body {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 5rem;
 }
 
 .project-card:hover {
@@ -273,4 +298,38 @@ body {
 
 .gallery-item img:hover {
   transform: scale(1.05);
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #6b21a8, #9333ea, #6d28d9);
+  background-size: 600% 600%;
+  z-index: -1;
+  animation: gradientBG 20s ease infinite;
+  opacity: 0.1; /* Ajusta la intensidad */
+  pointer-events: none;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
 }
