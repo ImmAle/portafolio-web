@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/files/(.*)", "destination": "/files/$1" },
+    { "source": "/portafolio-web/files/:path*", "destination": "/files/:path*" },
+    { "source": "/files/:path*", "destination": "/files/:path*" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }

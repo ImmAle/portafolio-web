@@ -387,68 +387,47 @@ body::before {
 
 /* Paraa responsive*/
 
-/* Estilo base */
+/* Ocultar menú hamburguesa en escritorio */
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   background: none;
   border: none;
-  color: inherit;
   cursor: pointer;
-  z-index: 1100;
+  color: inherit;
 }
 
-/* Menú normal (desktop) */
-.nav {
-  display: flex;
-  gap: 1.2rem;
-}
-
-/* Menú hamburguesa (mobile) */
+/* Estilos móviles */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
   }
 
   .nav {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%; /* Oculto por defecto */
+    width: 70%;
     height: 100vh;
-    width: 80%; /* 🔹 ahora ocupa solo 80% */
+    background-color: #111;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(
-      to bottom right,
-      rgba(120, 50, 200, 0.95),
-      rgba(50, 0, 90, 0.85)
-    ); /* 🔹 degradado morado translúcido */
-    transform: translateX(100%); /* 🔹 oculto a la derecha */
-    transition: transform 0.4s ease-in-out;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
     z-index: 1000;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem; /* bordes suaves */
   }
 
   .nav.open {
-    transform: translateX(0); /* 🔹 aparece desde la derecha */
+    right: 0; /* Desliza hacia dentro */
   }
 
-  .nav a {
-    font-size: 1.3rem;
-    margin: 1rem 0;
-    color: white;
-    transition: color 0.3s ease;
-  }
-
-  .nav a:hover {
-    color: #d4a5ff; /* morado claro al pasar el mouse */
-  }
-
+  .nav a, 
   .theme-toggle {
-    margin-top: 1.5rem;
-    font-size: 1.6rem;
-    color: white;
+    font-size: 1.5rem;
   }
 }

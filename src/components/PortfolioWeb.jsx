@@ -1,7 +1,15 @@
 // src/components/PortfolioWeb.jsx
 import React, { useState, useEffect } from "react";
-import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
-import { FaMoon, FaSun } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
+  FaMoon,
+  FaSun,
+} from "react-icons/fa";
 import "../styles/PortfolioWeb.css";
 import ParticlesBackground from "./ParticlesBackground";
 
@@ -39,12 +47,23 @@ const PortfolioWeb = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
+        {/* 🔹 Menú hamburguesa fullscreen negro */}
         <nav className={`nav ${menuOpen ? "open" : ""}`}>
-          <a href="#about" onClick={() => setMenuOpen(false)}>Sobre mí</a>
-          <a href="#projects" onClick={() => setMenuOpen(false)}>Documentos</a>
-          <a href="#gallery" onClick={() => setMenuOpen(false)}>Galería</a>
-          <a href="#my-projects" onClick={() => setMenuOpen(false)}>Proyectos</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contacto</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            Sobre mí
+          </a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>
+            Documentos
+          </a>
+          <a href="#gallery" onClick={() => setMenuOpen(false)}>
+            Galería
+          </a>
+          <a href="#my-projects" onClick={() => setMenuOpen(false)}>
+            Proyectos
+          </a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            Contacto
+          </a>
 
           {/* Botón cambio tema */}
           <button className="theme-toggle" onClick={toggleTheme}>
@@ -53,6 +72,7 @@ const PortfolioWeb = () => {
         </nav>
       </header>
 
+      {/* Hero */}
       <section className="hero">
         <h2>Hola, soy Immanol</h2>
         <p>Estudiante y Futuro Desarrollador Web Frontend</p>
@@ -61,6 +81,7 @@ const PortfolioWeb = () => {
         </a>
       </section>
 
+      {/* Sobre mí */}
       <section id="about" className="about">
         <h3>Sobre mí</h3>
         <p>
@@ -75,6 +96,7 @@ const PortfolioWeb = () => {
         </p>
       </section>
 
+      {/* Galería */}
       <section className="gallery" id="gallery">
         <h3>Galería</h3>
         <div className="gallery-grid">
@@ -90,21 +112,21 @@ const PortfolioWeb = () => {
         </div>
       </section>
 
-      {/* 🔹 Sección de proyectos */}
+      {/* Proyectos en Vercel */}
       <section id="my-projects" className="my-projects">
         <h3>Mis Proyectos</h3>
         <div className="projects-grid">
           <div className="project-card">
-            <img 
-              src="/files/lfxj.jpg" 
-              alt="Vista previa Proyecto 1" 
-              className="project-preview" 
+            <img
+              src="/files/lfxj.jpg"
+              alt="Vista previa Proyecto 1"
+              className="project-preview"
             />
             <div className="project-overlay">
               <h3>Proyecto 1</h3>
-              <a 
-                href="https://luisfabioxammarjurado.vercel.app/" 
-                target="_blank" 
+              <a
+                href="https://luisfabioxammarjurado.vercel.app/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="project-link"
               >
@@ -115,9 +137,10 @@ const PortfolioWeb = () => {
         </div>
       </section>
 
-      {/* 🔹 Documentos */}
+      {/* Documentos */}
       <section id="projects" className="projects">
         <h3>Mis Documentos</h3>
+
         <div className="project-card">
           <div
             className="project-image"
@@ -129,7 +152,7 @@ const PortfolioWeb = () => {
             <h4>Certificado de Ingles</h4>
             <p>British House International 2021-2022.</p>
             <a
-              href="/portafolio-web/files/ingles.pdf"
+              href={`${import.meta.env.BASE_URL}files/ingles.pdf`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -149,7 +172,7 @@ const PortfolioWeb = () => {
             <h4>Certificado IoT</h4>
             <p>Cisco Networking Academy® Introduction to IoT.</p>
             <a
-              href="/portafolio-web/files/iot.pdf"
+              href={`${import.meta.env.BASE_URL}files/iot.pdf`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -169,7 +192,7 @@ const PortfolioWeb = () => {
             <h4>Curriculum Vitae</h4>
             <p>Sobre mi.</p>
             <a
-              href="/portafolio-web/files/CV.pdf"
+              href={`${import.meta.env.BASE_URL}files/CV.pdf`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -179,6 +202,7 @@ const PortfolioWeb = () => {
         </div>
       </section>
 
+      {/* Contacto */}
       <section id="contact" className="contact">
         <h3>Contacto</h3>
         <p>¿Quieres trabajar conmigo? ¡Hablemos!</p>
